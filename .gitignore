@@ -1,0 +1,51 @@
+# Python caches and packaging/build artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local virtual environments and macOS metadata
+.venv/
+venv/
+.DS_Store
+._*
+
+# Local credentials (keep shareable examples)
+.env
+.env.*
+!.env.example
+token.txt
+*_token.txt
+*.pem
+*.key
+id_rsa
+id_ed25519
+
+# Local editor and agent settings
+.vscode/
+.idea/
+.codex/
+.agents/
+AGENTS.md
+
+# Local configuration and scratch work
+config/paths.yaml
+debugging.py
+
+# Generated figure outputs (keep directory placeholders)
+figures/**/outputs/*
+!figures/**/outputs/.gitkeep
+
+# External inputs and generated comparison/derived artifacts
+/data/
+/derived/
+/validation_outputs/
+/tmp/
+tk.txt
+*.token
+
+

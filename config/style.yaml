@@ -1,0 +1,54 @@
+rcparams: {pdf.fonttype: 42, svg.fonttype: none, font.family: sans-serif, font.sans-serif: [Arial], text.usetex: false}
+column_width_1: 3.50394    # inches
+column_width_2: 7.20472441
+font: {title: 6, axes_title: 6, ticklabel: 6, driverlabel: 6}
+line: {width: 0.5, spines: 0.5, tick_width: 0.5, tick_length: 1}
+point_size: 6
+dpi: 300
+activation:
+  trace_colors: {S000: black, S443: '#0d422f', S442: '#15805e', default: '#3443b3'}
+  stimulus_color: '#eb4034'
+  stimulus_line_width: 0.0001
+  point_size: 3
+  point_color: black
+  mean_color: blue
+  interval_color: slategray
+  interval_alpha: 0.3
+  interval_width: 0.5
+silencing:
+  trace_colors: {S000: k, S443: '#04780b', S195: '#f08113', default: '#3443b3'}
+  ux_experiment_color: '#3443b3'
+  visual_color: k
+  visual_alpha: 0.1
+  illumination_color: '#41b548'
+  illumination_alpha: 0.2
+  patch_line_width: 0.0001
+  point_size: 6
+  point_color: black
+  mean_color: blue
+  interval_color: '#808080'
+  interval_alpha: 0.5
+  interval_width: 0.5
+robofly:
+  baseline_color: k
+  stimulation_color: r
+  baseline_mean_alpha: 0.5
+  stimulation_mean_alpha: 1
+  baseline_mean_style: '-'
+  stimulation_mean_style: '--'
+  xlabel: wingbeat
+  xlabel_pad: -3
+  ylabel_pad: 0
+  component_title_pad: 2
+
+free_flight:
+  experiment_color: red
+  control_color: black
+  illumination_color: '#f55714'
+  point_color: black
+  point_alpha: 0.5
+  point_size: 3
+  interval_color: slategray
+  interval_alpha: 0.3
+  interval_width: 0.5
+  mean_color: blue

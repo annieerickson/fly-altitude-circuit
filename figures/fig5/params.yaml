@@ -1,0 +1,81 @@
+panels:
+  fig5A:
+    dataset: connectomics_fafb
+    statistics_only_supported: false
+    analysis: {pre_super_class: visual_projection, top_cells: 10}
+    plot:
+      label: Top visual inputs
+      fig_size: [2.4015748033333333, 2.50984252125]
+      set_color_max: null
+  fig5D:
+    dataset: connectomics_manc
+    statistics_only_supported: false
+    analysis: {top_cells: 10}
+    plot:
+      label: Top outputs in VNC
+      fig_size: [2.4015748033333333, 2.50984252125]
+      set_color_max: null
+  fig5C_top:
+    canvas_padding_in: {left: 0.2, right: 0.05, bottom: 0.2, top: 0.2}
+    function: plot_avg_trace_per_visual_stimulus_updown_experiment_LPT_combine_yaw_only_LpR_rescaled
+    datasets:
+      data_df_dir: two_photon_lpt49_panel
+    arguments:
+      patterns_to_plot: &id001
+        -2.0: Pitch Up
+        -5.5: Upward
+        -3.0: Yaw left
+        3.0: Yaw right
+        2.0: Pitch Down
+        5.5: Downward
+      line: '2075'
+      flying_threshold_default: 0.14
+      seconds_pre: 0.5
+      seconds_post: 1
+      airpuff_threshold: 2.0
+      plot_bs_CI: true
+      air_puff_pre_s: 1
+      axis_label_fontsize: 6
+      axis_ticklabel_fontsize: 6
+      label_pad: 0
+      line_width: 0.25
+      alpha_CI: 0.3
+      alpha_patch: 1.0
+      dff_row: 0
+      LRwing_row: 1
+      interp_to: median
+      quiescence: false
+      color_dff: '#3379b5'
+    statistics_only_supported: false
+    retain: null
+    export_format: svg
+    transparent: false
+  fig5C_bottom:
+    canvas_padding_in: {left: 0.2, right: 0.05, bottom: 0.2, top: 0.2}
+    function: plot_avg_trace_per_visual_stimulus_updown_experiment_combine_yaw_avg_roi_LpR_only_rescaled
+    datasets:
+      data_df_dir: two_photon_lpt27_panel
+    arguments:
+      patterns_to_plot: *id001
+      line: '2087'
+      flying_threshold_default: 0.14
+      seconds_pre: 0.5
+      seconds_post: 1
+      airpuff_threshold: 2.0
+      plot_bs_CI: true
+      air_puff_pre_s: 1
+      axis_label_fontsize: 6
+      axis_ticklabel_fontsize: 6
+      label_pad: 0
+      line_width: 0.25
+      alpha_CI: 0.3
+      alpha_patch: 1.0
+      dff_row: 0
+      LRwing_row: 1
+      interp_to: median
+      quiescence: false
+      color_dff: '#2eb1e6'
+    statistics_only_supported: false
+    retain: null
+    export_format: svg
+    transparent: false

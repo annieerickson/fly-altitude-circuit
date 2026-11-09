@@ -1,0 +1,92 @@
+silencing_ux:
+  folder: silencing/reaper_hid
+  prepared_dataframe: df.pkl
+connectomics_fafb:
+  folder: connectomics/FAFB
+  prepared_dataframe: DNa10_upstream_annotations_df_with_NT_v783.pkl
+connectomics_manc:
+  folder: connectomics/MANC
+  prepared_dataframe: DNa10_cell_outputs_VNC.csv
+silencing_gtacr:
+  folder: silencing/GtACR
+  prepared_dataframe: df_GTCL.pkl
+optogenetic_screen:
+  folder: optogenetic_screen
+  per_line:
+    wb:    "{line}_individual_flies_wb_a.hdf5"
+    movie: "{line}_individual_flies_movies_wb_a.hdf5"
+DNa10_activation:
+  folder: DNa10_activation
+  prepared_dataframe: df.pkl
+robofly:
+  folder: robofly/1070
+  results: results
+  inputs: inputs
+  runs:
+    - {role: left_baseline, side: L, result: 1070_L_baseline_wb_n_0_results.mat, input: 1070_L_baseline_wb_n_0.txt}
+    - {role: right_baseline, side: R, result: 1070_R_baseline_wb_n_0_results.mat, input: 1070_R_baseline_wb_n_0.txt}
+    - {role: left_stimulation, side: L, result: 1070_L_stim_wb_n_0_results.mat, input: 1070_L_stim_wb_n_0.txt}
+    - {role: right_stimulation, side: R, result: 1070_R_stim_wb_n_0_results.mat, input: 1070_R_stim_wb_n_0.txt}
+free_flight:
+  folder: free_flight
+  experimental:
+    - CsChrimson/20230725_144823_full_trim_protocol.csv
+    - CsChrimson/20230726_151835_full_trim_protocol.csv
+  control:
+    - EV/20230821_164228_full_trim_protocol.csv
+    - EV/20230822_164013_full_trim_protocol.csv
+two_photon_dna10_width:
+  folder: 2p/DNa10/translation_vary_width
+  line: "1070"
+  stimulus: "{line}_AIMeanFrames_combined.pkl"
+  fluorescence: "{line}_dFF_combined.pkl"
+two_photon_dna10_descending:
+  folder: 2p/DNa10/descending_branch
+  line: "1070"
+  stimulus: "{line}_AIMeanFrames_combined.pkl"
+  fluorescence: "{line}_dFF_combined.pkl"
+two_photon_dna10_panel:
+  folder: 2p/DNa10/panel
+  line: "1070"
+  stimulus: "{line}_AIMeanFrames_combined.pkl"
+  fluorescence: "{line}_dFF_combined.pkl"
+two_photon_dna10_updown:
+  folder: 2p/DNa10/translation_up_down
+  line: "1070"
+  stimulus: "{line}_AIMeanFrames_combined.pkl"
+  fluorescence: "{line}_dFF_combined.pkl"
+two_photon_lpt49_panel:
+  folder: 2p/LPT49/panel
+  line: "2075"
+  stimulus: "{line}_AIMeanFrames_combined.pkl"
+  fluorescence: "{line}_dFF_combined.pkl"
+two_photon_lpt49_width:
+  folder: 2p/LPT49/translation_vary_width
+  line: "2075"
+  stimulus: "{line}_AIMeanFrames_combined.pkl"
+  fluorescence: "{line}_dFF_combined.pkl"
+two_photon_lpt49_speed:
+  folder: 2p/LPT49/translation_vary_speed
+  line: "2075"
+  stimulus: "{line}_AIMeanFrames_combined.pkl"
+  fluorescence: "{line}_dFF_combined.pkl"
+two_photon_lpt49_quiescence:
+  folder: 2p/LPT49/quiescence
+  line: "2075"
+  stimulus: "{line}_AIMeanFrames_combined.pkl"
+  fluorescence: "{line}_dFF_combined.pkl"
+two_photon_lpt27_panel:
+  folder: 2p/LPT27/panel
+  line: "2087"
+  stimulus: "{line}_AIMeanFrames_combined.pkl"
+  fluorescence: "{line}_dFF_combined.pkl"
+two_photon_lpt27_quiescence:
+  folder: 2p/LPT27/quiescence
+  line: "2087"
+  stimulus: "{line}_AIMeanFrames_combined.pkl"
+  fluorescence: "{line}_dFF_combined.pkl"
+two_photon_loom:
+  folder: 2p
+  filename: loom_stimuli.txt
+two_photon:
+  folder: 2p

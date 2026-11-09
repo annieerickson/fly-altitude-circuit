@@ -1,0 +1,229 @@
+panels:
+  figS6:
+    function: plot_avg_trace_per_visual_stimulus_single_experiment
+    datasets:
+      data_general_df_dir: two_photon_dna10_panel
+      data_trans_df_dir: two_photon_dna10_width
+    arguments:
+      patterns_to_plot:
+        1.0: '36 deg
+
+          azimuth'
+        3.0: '72 deg
+
+          azimuth'
+        5.0: '108 deg
+
+          azimuth'
+        7.0: '144 deg
+
+          azimuth'
+        9.0: '180 deg
+
+          azimuth'
+        11.0: '216 deg
+
+          azimuth'
+        4.0: 'Pitch
+
+          down'
+        12.0: 'Peripheral
+
+          reverse'
+      line: '1070'
+      flying_threshold_default: 0.14
+      seconds_pre: 0.5
+      seconds_post: 1
+      airpuff_threshold: 2.0
+      plot_bs_CI: true
+      air_puff_pre_s: 1
+      axis_label_fontsize: 6
+      axis_ticklabel_fontsize: 6
+      plot_original_exp: false
+      label_pad: 0
+      line_width: 0.5
+      alpha_CI: 0.3
+      alpha_patch: 0.2
+      dff_row: 0
+      wing_row: 1
+      LRwing_row: 2
+    statistics_only_supported: false
+    retain: null
+    export_format: svg
+    transparent: false
+  figS7_top:
+    canvas_padding_in: {top: 0.2}  # Space for titles; retain subplot dimensions.
+    reuse:
+      params: figures/fig3/params.yaml
+      panel: fig3D
+    statistics_only_supported: false
+    retain: dff_row
+  figS7_bottom:
+    canvas_padding_in: {top: 0.2}
+    function: plot_avg_trace_per_visual_stimulus_both_experiments_quiescence
+    datasets:
+      data_general_df_dir: two_photon_dna10_panel
+      data_trans_df_dir: two_photon_dna10_width
+    arguments:
+      patterns_to_plot:
+        -5.0: Yaw left
+        5.0: Yaw right
+        3.0: Roll left
+        -3.0: Roll right
+        7.7: Loom left
+        8.3: Loom right
+        8.0: "Front \nloom"
+        -6.0: "Regressive \n "
+        6.0: "Progressive \n "
+        4.0: "Pitch \ndown"
+        -4.0: "Pitch \nup"
+        11.0: 'Downward
+
+          translation'
+      patterns_to_plot_original: &id001
+        -5.0: Yaw left
+        5.0: Yaw right
+        3.0: Roll left
+        -3.0: Roll right
+        7.7: Loom left
+        8.3: Loom right
+        8.0: "Front \nloom"
+        -6.0: "Regressive \n "
+        6.0: "Progressive \n "
+        4.0: "Pitch \ndown"
+        -4.0: "Pitch \nup"
+      patterns_to_plot_trans:
+        11.0: '216 deg
+
+          azimuth'
+      line: '1070'
+      flying_threshold_default: 0.14
+      seconds_pre: 0.5
+      seconds_post: 0.5
+      airpuff_threshold: 2.0
+      plot_bs_CI: true
+      air_puff_pre_s: 0
+      axis_label_fontsize: 6
+      axis_ticklabel_fontsize: 6
+      label_pad: 2
+      line_width: 0.5
+      alpha_CI: 0.3
+      alpha_patch: 1.0
+      dff_row: 0
+      wing_row: 1
+      LRwing_row: 2
+      include_loom_trace: false
+      loom_trace_row: 0
+    statistics_only_supported: false
+    retain: dff_row
+    export_format: svg
+    transparent: false
+  figS5C:
+    function: plot_entire_trial_or_snippet
+    datasets:
+      data_df_dir: two_photon_dna10_descending
+    arguments:
+      pattern_dict:
+        -5.0: YL
+        5.0: YR
+        3.0: RL
+        -3.0: RR
+        7.7: LL
+        8.3: LR
+        8.0: FLoom
+        -6.0: R
+        6.0: P
+        4.0: PD
+        -4.0: PU
+      single_roi: false
+      frames_drop: 5
+      plot_flight_stops_as_nan: true
+      flying_threshold: 0.14
+      dff_row: 0
+      wing_row: 1
+      line: '1070'
+      date: '230420'
+      trial_num: ' 41'
+      fly_id: '28'
+      start: 91.0
+      stop: 147.0
+      scale_y: 1.0
+      bwfilter_dFF: false
+      axis_label_fontsize: 6
+      axis_ticklabel_fontsize: 6
+      label_pad: 15
+      line_width: 0.5
+      width: 3.602362205
+    statistics_only_supported: false
+    retain: null
+    export_format: svg
+    transparent: false
+  figS5F:
+    function: plot_avg_trace_per_visual_stimulus_descending_branches
+    datasets:
+      data_general_df_dir: two_photon_dna10_descending
+    arguments:
+      patterns_to_plot: *id001
+      line: '1070'
+      flying_threshold_default: 0.14
+      seconds_pre: 0.5
+      seconds_post: 1
+      airpuff_threshold: 2.0
+      plot_bs_CI: true
+      air_puff_pre_s: 1
+      axis_label_fontsize: 6
+      axis_ticklabel_fontsize: 6
+      label_pad: 0
+      line_width: 0.5
+      alpha_CI: 0.3
+      alpha_patch: 0.2
+      dff_row: 0
+      wing_row: 1
+      LRwing_row: 2
+      LmRwing_row: 3
+      loom_trace_row: 0
+      column_width: 7.20472441
+      include_loom_trace: false
+      include_LmR: true
+    statistics_only_supported: false
+    retain: null
+    export_format: svg
+    transparent: false
+  figS5D:
+    function: plot_avg_trace_per_flight_starts_combined_flies_descending_branches
+    datasets:
+      data_general_df_dir: two_photon_dna10_descending
+    arguments:
+      line: '1070'
+      flying_threshold_default: 0.14
+      seconds_pre: 1
+      seconds_post: 1
+      airpuff_threshold: 2.0
+      bout_time: 2
+      plot_bs_CI: true
+      line_width: 0.5
+      axis_ticklabel_fontsize: 6
+      axis_label_fontsize: 6
+    statistics_only_supported: false
+    retain: null
+    export_format: svg
+    transparent: false
+  figS5E:
+    function: plot_corr_descending_left_right_dff_all_trials
+    datasets:
+      data_df_dir: two_photon_dna10_descending
+    arguments:
+      line: '1070'
+      flying_threshold_default: 0.14
+      regression: ODR
+      plot_z_score: true
+      z_score_per: fly
+      line_width: 0.5
+      point_size: 6
+      axis_ticklabel_fontsize: 6
+      axis_label_fontsize: 6
+      plot_trendline: true
+    statistics_only_supported: false
+    retain: null
+    export_format: png
+    transparent: false

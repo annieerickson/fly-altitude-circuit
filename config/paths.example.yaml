@@ -1,0 +1,6 @@
+# Copy this file to paths.yaml (ignored by Git) and set your data location.
+# Relative paths are resolved from the repository root; ~ is supported.
+data_root: /path/to/unzipped/data
+
+# Optional: keep other data trees protected if you switch data_root later.
+protected_data_roots: []

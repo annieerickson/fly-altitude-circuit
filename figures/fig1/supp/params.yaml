@@ -1,0 +1,73 @@
+seed: 0
+panels:
+  s1_top:
+    lines: order
+    wing_side: L
+    plot_diff_from_avg: true
+    baseline_minus_activation: true
+    abbrev_labels: true
+    label_top: false
+    label_bottom: false            
+    title_position: top
+    top_padding_in: 0.35           # Extra canvas for long rotated driver titles.
+    xlim_all_columns: true
+    ylabel_pad: 6
+    trace_color: red
+    change_color: gray
+    highlight_lines: ["1070", "S37"]
+    highlight_color: black
+    id_only_labels: ["S00", "S390"]
+    size_in: [7.20472441, 3.50394]
+    subplots_adjust: {left: 0.062, bottom: 0.084, right: 0.993, top: 0.837, wspace: 0.033, hspace: 0.443}
+  s1_bottom:
+    lines: order
+    wing_side: R
+    plot_diff_from_avg: true
+    baseline_minus_activation: true
+    abbrev_labels: true
+    label_top: false
+    label_bottom: true
+    title_position: none
+    xlim_all_columns: true
+    ylabel_pad: 6
+    trace_color: red
+    change_color: gray
+    highlight_lines: ["1070", "S37"]
+    highlight_color: black
+    id_only_labels: ["S00", "S390"]
+    size_in: [7.20472441, 3.50394]
+    subplots_adjust: {left: 0.062, bottom: 0.084, right: 0.993, top: 0.837, wspace: 0.033, hspace: 0.443}
+  s2:
+    lines: order
+    angles: [phi, theta, eta, xi]
+    wing_combine: "L+R"
+    baseline_subtract: per_stimulus
+    baseline_minus_activation: true
+    plot_fly_means: true
+    jitter: 0.1
+    bootstrap_iterations: 1000
+    ci: 95.0
+    mean_color: blue
+    line_width: 0.25
+    abbrev_labels: true               # match what used for S2
+    id_only_labels: ["S00", "S390"]
+    show_line_labels: true
+    xtick_pad: null
+    x_margin: 0.02
+    ylabel_style: multi
+    ylabel_suffix: "\n(deg)"
+    ylabel_pad: 5
+    size_in: [7.20472441, 3.50394]
+    subplots_adjust: {left: 0.062, bottom: 0.026, right: 0.993, top: 0.814, wspace: 0.2, hspace: 0.002}
+
+key_point_axes:
+  phi:   {ylim: [-60, 50], yticks: [-40, 0, 40]}
+  theta: {ylim: [-40, 30], yticks: [-30, 0, 30]}
+  eta:   {ylim: [-40, 30], yticks: [-30, 0, 20]}
+  xi:    {ylim: [-17, 15], yticks: [-10, 0, 10]}
+
+axes:
+  phi:   {ylim: [-70, 100],  yticks: [-60, 0, 100],  d_ylim: [-20, 20],   d_yticks: [-20, 0, 20]}
+  theta: {ylim: [-30, 45],   yticks: [-30, 0, 40],   d_ylim: [-20, 12],   d_yticks: [-20, 0, 10]}
+  eta:   {ylim: [-140, 80],  yticks: [-140, 0, 80],  d_ylim: [-14, 22],   d_yticks: [-10, 0, 20]}
+  xi:    {ylim: [-35, 40],   yticks: [-30, 0, 40],   d_ylim: [-12.5, 10], d_yticks: [-10, 0, 10]}

@@ -1,0 +1,21 @@
+name: altitude-env
+dependencies:
+    - python
+    - scipy>=1.16
+    - numpy
+    - h5py
+    - matplotlib
+    - numba
+    - tqdm
+    - pandas
+    - statsmodels
+    - vtk
+    - pillow
+    - pip
+    - pip:
+        - opencv-python
+        - scikit-learn
+        - geomdl
+        - altair
+        - scikit-posthocs
+        - PyYAML

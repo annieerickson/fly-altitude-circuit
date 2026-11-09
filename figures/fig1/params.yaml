@@ -1,0 +1,107 @@
+seed: 0
+panels:
+  d_top:
+    lines: main_subset              # key in config/screen_lines.yaml
+    wing_side: L
+    plot_diff_from_avg: true
+    baseline_minus_activation: true
+    abbrev_labels: true             
+    label_top: true
+    label_bottom: false
+    title_position: bottom
+    trace_color: red
+    change_color: gray
+    highlight_lines: ["1070", "S37"]
+    highlight_color: black         
+    id_only_labels: ["S00", "S390"]
+    size_in: [3.50394, 3.50394]
+    subplots_adjust: {left: 0.124, bottom: 0.14, right: 0.971, top: 0.912, wspace: 0.13, hspace: 0.43}
+  d_bottom:
+    lines: main_subset
+    angles: [phi]
+    wing_combine: "L+R"
+    baseline_subtract: per_stimulus
+    baseline_minus_activation: true
+    plot_fly_means: true
+    jitter: 0.1
+    bootstrap_iterations: 1000
+    ci: 95.0
+    mean_color: black
+    line_width: 0.25                  
+    abbrev_labels: false
+    id_only_labels: ["S00", "S390"]
+    show_line_labels: false           
+    xtick_pad: 0.25
+    x_margin: null                    
+    ylabel_style: single
+    ylabel: "L+R\nWBA\n(deg)"
+    size_in: [3.50394, 0.875985]      
+    subplots_adjust: {left: 0.138, bottom: 0.0, right: 0.971, top: 0.979, wspace: 0.2, hspace: 0.2}
+
+  f:
+    dataset: DNa10_activation
+    stimVolts: [2.0]
+    pre_stim: 0.5
+    post_stim: 1
+    stim_duration: 0.68
+    fs: 100
+    exp_name: ChRT
+    include_bs_CI: true
+    post_stim_flying_thresh: 1
+    bootstrap_iterations: 1000
+    ci: 95.0
+    alpha_patch: 0.2
+    alpha_CI: 0.2
+    line_width: 0.5
+    size_in: [1.75197, 1.16798]
+    subplots_adjust: {left: 0.352, bottom: 0.283, right: 0.957, top: 0.948}
+    axes:
+      xlim: [-0.625, 1.7]
+      xticks: [-0.5, 0, 0.5, 1, 1.5]
+      bottom_spine_bounds: [-0.5, 1.5]
+      ylim: [-25, 10]
+      yticks: [10, 0, -10, -20]
+      left_spine_bounds: [10, -20]
+      xlabel: 'time (s)'
+      ylabel: "L+R WSA (deg)"
+      ylabel_pad: 15
+  f_stats:
+    dataset: DNa10_activation
+    stimVolts: [2.0]
+    pre_stim: 0.5
+    post_stim: 1
+    stim_duration: 0.68
+    fs: 100
+    exp_name: ChRT
+    include_bs_CI: true
+    post_stim_flying_thresh: 1
+    bootstrap_iterations: 1000
+    ci: 95.0
+    permutation_iterations: 1000000
+    comparisons: [[0, 2], [1, 2], [0, 1]]
+    correction: holm
+    jitter: 0.1
+    line_width: 0.5
+    size_in: [2.627955, 1.16798]
+    subplots_adjust: {left: 0.352, bottom: 0.283, right: 0.957, top: 0.948}
+    axes:
+      xticks: [0, 1, 2]
+      ylim: [-25, 10]
+      yticks: [10, 0, -10, -20]
+      left_spine_bounds: [10, -20]
+      ylabel: " L+R wing \n amplitude \n (deg)"
+      ylabel_pad: 15
+
+key_point_axes:
+  phi:   {ylim: [-50, 50], yticks: [-20, 0, 20]}
+  theta: {ylim: [-40, 30], yticks: [-30, 0, 30]}
+  eta:   {ylim: [-40, 30], yticks: [-30, 0, 20]}
+  xi:    {ylim: [-10, 15], yticks: [-10, 0, 10]}
+
+axes:
+  phi:   {ylim: [-70, 100], ylim_label_top: [-70, 125], yticks: [-60, 0, 100],
+          d_ylim: [-20, 20], d_yticks: [-20, 0, 20]}
+  theta: {ylim: [-30, 45],  yticks: [-30, 0, 40],  d_ylim: [-20, 10], d_yticks: [-20, 0, 10]}
+  eta:   {ylim: [-140, 80], yticks: [-140, 0, 80], d_ylim: [-10, 22], d_yticks: [-10, 0, 20]}
+  xi:    {ylim: [-35, 40],  yticks: [-30, 0, 40],  d_ylim: [-10, 10], d_ylim_label_bottom: [-12.5, 10],
+          d_yticks: [-10, 0, 10]}

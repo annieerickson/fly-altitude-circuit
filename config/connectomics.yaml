@@ -1,0 +1,17 @@
+nt_colormaps:
+  acetylcholine: Reds
+  glutamate: Greens
+  gaba: Blues
+fafb:
+  dataset: production
+  materialization: 783
+  annotation_version: v3.0.0
+  cell_type: DNa10
+  synapse_thresh_val: 2
+manc:
+  server: https://neuprint.janelia.org/
+  dataset: manc:v1.2.1
+  token_env: NEUPRINT_TOKEN
+  token_file_env: NEUPRINT_TOKEN_FILE
+  cell_type: DNa10
+  synapse_thresh_val: 2

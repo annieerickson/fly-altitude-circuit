@@ -1,0 +1,327 @@
+panels:
+  b:
+    dataset: silencing_ux
+    kind: ux_trace
+    pre_stim: 0.5
+    post_stim: 0.5
+    stim_duration: 3
+    fs: 100
+    exp_name: UX
+    post_stim_flying_thresh: 1
+    alpha_CI: 0.3
+    include_visual_patch: true
+    patterns: &id001
+      11.0: 'Downward
+
+        translational
+
+        motion'
+    bootstrap_iterations: 1000
+    ci: 95.0
+    line_width: 0.5
+    trace_mode: raw
+    source_size_in:
+    - 2.33596
+    - 0.875985
+    source_layout:
+      left: 0.193
+      bottom: 0.206
+      right: 0.982
+      top: 0.8
+      wspace: 0.785
+    axes:
+      xlim:
+      - -0.7
+      - 3.5
+      xticks:
+      - 0
+      - 3
+      raw:
+        ylim:
+        - 45
+        - 150
+        yticks:
+        - 50
+        - 75
+        - 100
+        - 125
+        - 150
+        spine_bounds:
+        - 50
+        - 150
+      diff:
+        ylim:
+        - -55
+        - 10
+        yticks:
+        - 10
+        - 0
+        - -25
+        - -50
+        spine_bounds:
+        - 10
+        - -50
+  b_baseline:
+    canvas_padding_in: {top: 0.15, bottom: 0.4}
+    dataset: silencing_ux
+    kind: ux_baseline
+    pre_stim_baseline_period: 2
+    post_stim: 1
+    stim_duration: 3
+    fs: 100
+    exp_name: UX
+    patterns: *id001
+    bootstrap_iterations: 1000
+    ci: 95.0
+    line_width: 0.5
+    permutation_iterations: 1000000
+    jitter: 0.1
+    size_in:
+    - 1.16798
+    - 0.875985
+    layout:
+      left: 0.444
+      bottom: 0.37
+      right: 0.979
+      top: 0.88
+    axes:
+      ylim:
+      - 60
+      - 160
+      yticks:
+      - 80
+      - 100
+      - 120
+      - 140
+      spine_bounds:
+      - 80
+      - 140
+      ylabel: 'Baseline L+R
+
+        WSA (deg)'
+      ylabel_pad: 1
+      rotation: 90
+      labels:
+      - Control
+      - Reaper-hid
+  b_response:
+    canvas_padding_in: {bottom: 0.4}
+    dataset: silencing_ux
+    kind: ux_response
+    pre_stim: 0.5
+    post_stim: 0.5
+    stim_duration: 3
+    fs: 100
+    exp_name: UX
+    post_stim_flying_thresh: 1
+    patterns: *id001
+    bootstrap_iterations: 1000
+    ci: 95.0
+    line_width: 0.5
+    permutation_iterations: 1000000
+    jitter: 0.1
+    size_in:
+    - 1.16798
+    - 0.875985
+    layout:
+      left: 0.404
+      bottom: 0.186
+      right: 1.0
+      top: 0.88
+    axes:
+      ylim:
+      - -55
+      - 10
+      yticks:
+      - 10
+      - 0
+      - -25
+      - -50
+      spine_bounds:
+      - 10
+      - -50
+      ylabel: $\Delta$L+R WSA (deg)
+      ylabel_pad: 0
+      rotation: 90
+      labels:
+      - Control
+      - Reaper-hid
+  c:
+    dataset: silencing_gtacr
+    kind: gtacr_trace
+    volt: 0.5
+    pre_stim: 0.25
+    post_stim: 0.25
+    stim_duration: 1.0
+    fs: 100
+    exp_name: GTCL
+    post_stim_flying_thresh: 1
+    alpha_CI: 0.3
+    bootstrap_iterations: 1000
+    ci: 95.0
+    line_width: 0.5
+    trace_mode: raw
+    source_size_in:
+    - 2.33596
+    - 0.875985
+    source_layout:
+      left: 0.125
+      bottom: 0.11
+      right: 0.9
+      top: 0.88
+      wspace: 0.2
+    axes:
+      xlim:
+      - -0.35
+      - 1.2
+      xticks:
+      - 0
+      - 1
+      raw:
+        ylim:
+        - 75
+        - 125
+        yticks:
+        - 80
+        - 100
+        - 120
+        spine_bounds:
+        - 80
+        - 120
+      diff:
+        ylim:
+        - -15
+        - 20
+        yticks:
+        - -10
+        - 0
+        - 10
+        - 20
+        spine_bounds:
+        - -10
+        - 20
+  c_response:
+    canvas_padding_in: {bottom: 0.4}
+    dataset: silencing_gtacr
+    kind: gtacr_response
+    mean_period: -1
+    volt: 0.5
+    pre_stim: 0.2
+    post_stim: 0.2
+    stim_duration: 1.0
+    fs: 100
+    exp_name: GTCL
+    post_stim_flying_thresh: 1
+    bootstrap_iterations: 1000
+    ci: 95.0
+    line_width: 0.5
+    permutation_iterations: 1000000
+    jitter: 0.1
+    size_in:
+    - 1.16798
+    - 0.875985
+    layout:
+      left: 0.404
+      bottom: 0.186
+      right: 1.0
+      top: 0.88
+    axes:
+      ylim:
+      - -5
+      - 15
+      yticks:
+      - -5
+      - 0
+      - 5
+      - 10
+      spine_bounds:
+      - -5
+      - 10
+      ylabel: '$\Delta$L+R
+
+        WSA (deg)'
+      ylabel_pad: 0
+      rotation: 45
+      labels:
+      - Control
+      - GtACR
+  ef:
+    wind: true
+    optic_flow_grid: true
+    start: -0.2
+    end: 2
+    long_or_wide: wide
+    alpha_patch: 0.2
+    alpha_CI: 0.3
+    time: s
+    line_width: 0.5
+    axis_ticklabel_fontsize: 6
+    axis_label_fontsize: 6
+    fig_width: 3.50394
+    fig_height: 1.75197
+    change_in_altitude_tpoint: 1.0
+    natural_flight_t_endpoint: 2.5
+    dataset: free_flight
+    kind: trace
+    ylim:
+    - -0.025
+    - 0.32
+    yticks:
+    - 0
+    - 0.1
+    - 0.2
+    - 0.3
+    ylabel: altitude (m)
+    xlim:
+    - -0.27999999999999997
+    - 2
+    xticks:
+    - 0
+    - 1
+    - 2
+    layout:
+      left: 0.125
+      bottom: 0.11
+      right: 0.9
+      top: 0.88
+      wspace: 0.2
+  ef_stats:
+    canvas_padding_in: {bottom: 0.5}
+    wind: true
+    optic_flow_grid: true
+    start: -0.2
+    end: 2
+    time: s
+    line_width: 0.5
+    axis_ticklabel_fontsize: 6
+    axis_label_fontsize: 6
+    fig_width: 4.204728
+    fig_height: 1.75197
+    change_in_altitude_tpoint: 1.0
+    dataset: free_flight
+    kind: statistics
+    ylim:
+    - -0.2
+    - 0.32
+    yticks:
+    - -0.2
+    - -0.1
+    - 0
+    - 0.1
+    - 0.2
+    - 0.3
+    ylabel: $\Delta$ altitude change (m)
+    xlim:
+    - -0.6
+    - 3.6
+    xticks:
+    - 0
+    - 1
+    - 2
+    - 3
+    layout:
+      left: 0.15
+      bottom: 0.121
+      right: 0.951
+      top: 0.88
+      hspace: 0.18

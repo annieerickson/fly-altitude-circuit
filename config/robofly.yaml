@@ -1,0 +1,12 @@
+gain_factor: 1.0
+n_wingbeats: 7
+srf_tilt_deg: 65
+stroke_shift_deg: 13
+body_cg: [0.03604015, 0.0, -0.23981816]
+physical:
+  g: 9800.0
+  mass: 1.034e-6
+  rho_fly: 1.18e-9
+  rho_robo: 880.0e-9
+  R_fly: 2.7
+  R_robo: 250.0

@@ -1,0 +1,158 @@
+panels:
+  figS8C_top:
+    canvas_padding_in: {top: 0.2}
+    function: plot_avg_trace_per_visual_stimulus_updown_experiment_LPT_combine_yaw_only_LpR_rescaled
+    datasets:
+      data_df_dir: two_photon_lpt49_quiescence
+    arguments:
+      patterns_to_plot: &id001
+        -2.0: Pitch Up
+        -5.5: Upward
+        -3.0: Yaw left
+        3.0: Yaw right
+        2.0: Pitch Down
+        5.5: Downward
+      line: '2075'
+      flying_threshold_default: 0.14
+      seconds_pre: 0.5
+      seconds_post: 1
+      airpuff_threshold: 2.0
+      plot_bs_CI: true
+      air_puff_pre_s: 1
+      axis_label_fontsize: 6
+      axis_ticklabel_fontsize: 6
+      label_pad: 0
+      line_width: 0.25
+      alpha_CI: 0.3
+      alpha_patch: 1.0
+      dff_row: 0
+      LRwing_row: 1
+      interp_to: median
+      quiescence: true
+      color_dff: '#3379b5'
+    statistics_only_supported: false
+    retain: dff_row
+    export_format: svg
+    transparent: false
+  figS8B:
+    canvas_padding_in: {left: 0.25, bottom: 0.2}
+    function: plot_avg_trace_per_visual_stimulus_updown_experiment_LPT_width_speed_LpR_only
+    datasets:
+      data_df_dir: two_photon_lpt49_width
+    arguments:
+      patterns_to_plot:
+        0.5: '35'
+        3.5: '144'
+        5.5: '216'
+      line: '2075'
+      flying_threshold_default: 0.14
+      seconds_pre: 0.5
+      seconds_post: 1
+      airpuff_threshold: 2.0
+      plot_bs_CI: true
+      air_puff_pre_s: 1
+      axis_label_fontsize: 6
+      axis_ticklabel_fontsize: 6
+      label_pad: 0
+      line_width: 0.25
+      alpha_CI: 0.3
+      alpha_patch: 1.0
+      dff_row: 0
+      LRwing_row: 1
+      interp_to: median
+      exp_type: width
+      color_dff: '#3379b5'
+    statistics_only_supported: false
+    retain: null
+    export_format: svg
+    transparent: false
+  figS8A:
+    canvas_padding_in: {left: 0.25, bottom: 0.2}
+    axes:
+      subplot_overrides:
+        - row: 0
+          column: 3
+          yticks: [0, 5]
+    function: plot_avg_trace_per_visual_stimulus_updown_experiment_LPT_width_speed_LpR_only_rescaled
+    datasets:
+      data_df_dir: two_photon_lpt49_speed
+    arguments:
+      patterns_to_plot:
+        -5.5: '+112.5'
+        -4.0: '+75.0'
+        -3.0: '+37.5'
+        6.0: Static Image
+        3.0: '-37.5'
+        4.0: '-75.0'
+        5.5: '-112.5'
+      line: '2075'
+      flying_threshold_default: 0.14
+      seconds_pre: 0.5
+      seconds_post: 1
+      airpuff_threshold: 2.0
+      plot_bs_CI: true
+      air_puff_pre_s: 1
+      axis_label_fontsize: 6
+      axis_ticklabel_fontsize: 6
+      label_pad: 0
+      line_width: 0.25
+      alpha_CI: 0.3
+      alpha_patch: 1.0
+      dff_row: 0
+      LRwing_row: 1
+      interp_to: median
+      exp_type: speed
+      color_dff: '#3379b5'
+    statistics_only_supported: false
+    retain: null
+    export_format: svg
+    transparent: false
+  figS8C_bottom:
+    canvas_padding_in: {left: 0.1, bottom: 0.3, top: 0.2}
+    axes:
+      subplot_overrides:
+        - row: 0
+          column: 0
+          xlabel: time (s)
+          xlabel_fontsize: 6
+          xticks: [0, 3]
+          xticklabel_fontsize: 6
+          bottom_spine_bounds: [0, 3]
+        - row: 0
+          column: 2
+          ylim: [-3.5, 3.5]
+          yticks: [0, 3]
+          left_spine_bounds: [0, 3]
+        - row: 0
+          column: 3
+          ylim: [-3.5, 3.5]
+        - row: 0
+          column: 4
+          ylim: [-3.5, 3.5]
+    function: plot_avg_trace_per_visual_stimulus_updown_experiment_combine_yaw_avg_roi_LpR_only_rescaled
+    datasets:
+      data_df_dir: two_photon_lpt27_quiescence
+    arguments:
+      patterns_to_plot: *id001
+      line: '2087'
+      flying_threshold_default: 0.14
+      seconds_pre: 0.5
+      seconds_post: 1
+      airpuff_threshold: 2.0
+      plot_bs_CI: true
+      air_puff_pre_s: 1
+      axis_label_fontsize: 6
+      axis_ticklabel_fontsize: 6
+      label_pad: 0
+      line_width: 0.25
+      alpha_CI: 0.3
+      alpha_patch: 1.0
+      dff_row: 0
+      LRwing_row: 1
+      interp_to: median
+      quiescence: true
+      color_dff: '#2eb1e6'
+    statistics_only_supported: false
+    retain: dff_row
+    export_format: svg
+    transparent: false

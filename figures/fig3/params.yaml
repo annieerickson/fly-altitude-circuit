@@ -1,0 +1,352 @@
+panels:
+  fig3J:
+    canvas_padding_in: {left: 0.3, bottom: 0.2}
+    function: plot_avg_trace_per_visual_stimulus_updown_experiment_scale_up_down
+    datasets:
+      data_df_dir: two_photon_dna10_updown
+    arguments:
+      patterns_to_plot: &id001
+        -5.5: '+112.5'
+        -4.0: '+75.0'
+        -3.0: '+37.5'
+        -2.0: '+25.0'
+        -1.0: '+12.5'
+        6.0: Static Image
+        1.0: '-12.5'
+        2.0: '-25.0'
+        3.0: '-37.5'
+        4.0: '-75.0'
+        5.5: '-112.5'
+      line: '1070'
+      flying_threshold_default: 0.14
+      seconds_pre: 0.5
+      seconds_post: 1
+      airpuff_threshold: 2.0
+      plot_bs_CI: true
+      air_puff_pre_s: 1
+      axis_label_fontsize: 6
+      axis_ticklabel_fontsize: 6
+      label_pad: 0
+      line_width: 0.25
+      alpha_CI: 0.3
+      alpha_patch: 1.0
+      dff_row: 0
+      LRwing_row: 1
+      interp_to: median
+    statistics_only_supported: false
+    retain: null
+    export_format: svg
+    transparent: false
+  fig3K:
+    axes: {ci_zorder: 4, mean_zorder: 5}
+    function: plot_tuning_curve_updown_experiments
+    datasets:
+      data_df_dir: two_photon_dna10_updown
+    arguments:
+      patterns_to_plot: *id001
+      line: '1070'
+      flying_threshold_default: 0.14
+      seconds_pre: 0.5
+      seconds_post: 1
+      airpuff_threshold: 2.0
+      plot_bs_CI: true
+      air_puff_pre_s: 1
+      axis_label_fontsize: 6
+      axis_ticklabel_fontsize: 5
+      line_width: 1
+      dff_col: 0
+      LRwing_col: 1
+      stat_method: mean
+      response_curve_to_compare: -1
+      interp_to: median
+      plot_fly_means: true
+      xloc_key:
+        -5.5: -9
+        -4.0: -6.0
+        -3.0: -3.0
+        -2.0: -2.0
+        -1.0: -1.0
+        6.0: 0
+        1.0: 1.0
+        2.0: 2.0
+        3.0: 3.0
+        4.0: 6.0
+        5.5: 9.0
+      xlabel_key:
+        -5.5: '+112.5'
+        -4.0: '+75.0'
+        -3.0: '+37.5'
+        -2.0: '+25.0'
+        -1.0: '+12.5'
+        6.0: '0.0'
+        1.0: '-12.5'
+        2.0: '-25.0'
+        3.0: '-37.5'
+        4.0: '-75.0'
+        5.5: '-112.5'
+      point_size: 5
+      jitter_means: true
+    statistics_only_supported: false
+    retain: dff_column
+    export_format: svg
+    transparent: false
+  fig3D:
+    canvas_padding_in: {left: 0.2, right: 0.05, bottom: 0.2, top: 0.2}
+    function: plot_avg_trace_per_visual_stimulus_both_experiments
+    datasets:
+      data_general_df_dir: two_photon_dna10_panel
+      data_trans_df_dir: two_photon_dna10_width
+    arguments:
+      patterns_to_plot:
+        -5.0: Yaw left
+        5.0: Yaw right
+        3.0: Roll left
+        -3.0: Roll right
+        7.7: Loom left
+        8.3: Loom right
+        8.0: "Front \nloom"
+        -6.0: "Regressive \n "
+        6.0: "Progressive \n "
+        4.0: "Pitch \ndown"
+        -4.0: "Pitch \nup"
+        11.0: 'Downward
+
+          translation'
+      patterns_to_plot_original:
+        -5.0: Yaw left
+        5.0: Yaw right
+        3.0: Roll left
+        -3.0: Roll right
+        7.7: Loom left
+        8.3: Loom right
+        8.0: "Front \nloom"
+        -6.0: "Regressive \n "
+        6.0: "Progressive \n "
+        4.0: "Pitch \ndown"
+        -4.0: "Pitch \nup"
+      patterns_to_plot_trans:
+        11.0: '216 deg
+
+          azimuth'
+      line: '1070'
+      flying_threshold_default: 0.14
+      seconds_pre: 0.5
+      seconds_post: 1
+      airpuff_threshold: 2.0
+      plot_bs_CI: true
+      air_puff_pre_s: 1
+      axis_label_fontsize: 6
+      axis_ticklabel_fontsize: 6
+      label_pad: 2
+      line_width: 0.5
+      alpha_CI: 0.3
+      alpha_patch: 1.0
+      dff_row: 0
+      wing_row: 1
+      LRwing_row: 2
+      include_loom_trace: false
+      loom_trace_row: 0
+    statistics_only_supported: false
+    retain: null
+    export_format: svg
+    transparent: false
+  fig3F:
+    canvas_padding_in: {bottom: 0.2}
+    function: plot_avg_trace_per_visual_stimulus_trans_exp_overlayed_simplified
+    datasets:
+      data_df_dir: two_photon_dna10_width
+    arguments:
+      pattern_dict_to_plot:
+        1.0: '36 deg
+
+          azimuth'
+        11.0: '216 deg
+
+          azimuth'
+        12.0: Peripheral reverse
+      line: '1070'
+      flying_threshold_default: 0.14
+      seconds_pre: 0.5
+      seconds_post: 1
+      seconds_post_plot: 0.5
+      airpuff_threshold: 2.0
+      plot_individual_traces: false
+      plot_fly_means: false
+      plot_bs_CI: true
+      stim_seconds: 3
+      air_puff_pre_s: 1
+      colormap: black
+      pitch_color: black
+      CDOU_color: '#4632a8'
+      alpha_patch: 1.0
+      alpha_CI: 1.0
+      include_visual_patch: true
+      line_width: 0.5
+      axis_ticklabel_fontsize: 6
+      axis_label_fontsize: 6
+    statistics_only_supported: false
+    retain: null
+    export_format: svg
+    transparent: true
+  fig3I:
+    function: plot_updown_fullspeed_overlayed
+    datasets:
+      data_df_dir: two_photon_dna10_updown
+    arguments:
+      pattern_dict_to_plot:
+        -5.5: '100% Speed
+
+          Upward translation'
+        6.0: Static Image
+        5.5: '100% Speed
+
+          Downward translation'
+      line: '1070'
+      flying_threshold_default: 0.14
+      seconds_pre: 0.5
+      seconds_post: 1
+      seconds_post_plot: 0.5
+      airpuff_threshold: 2.0
+      plot_individual_traces: false
+      plot_fly_means: false
+      plot_bs_CI: true
+      stim_seconds: 3
+      air_puff_pre_s: 1
+      colormap: black
+      alpha_patch: 1.0
+      alpha_CI: 0.5
+      include_visual_patch: true
+      line_width: 0.5
+      axis_ticklabel_fontsize: 6
+      axis_label_fontsize: 6
+    statistics_only_supported: false
+    retain: null
+    export_format: svg
+    transparent: true
+  fig3G:
+    canvas_padding_in: {left: 0.25}
+    function: plot_peak_dff_by_visual_stim_panel_width_shade_box_CI
+    datasets:
+      data_df_dir: two_photon_dna10_width
+    arguments:
+      pattern_dict:
+        1.0: '36'
+        3.0: '72'
+        5.0: '108'
+        7.0: '144'
+        9.0: '180'
+        11.0: '216'
+        4.0: Pitch
+        12.0: Per. rev
+      line: '1070'
+      flying_threshold_default: 0.14
+      seconds_pre: 0.5
+      seconds_post: 1
+      airpuff_threshold: 2.0
+      plot_fly_means: true
+      plot_bs_CI: true
+      stim_seconds: 3
+      air_puff_pre_s: 1
+      response_curve_to_compare: -3
+      stat_method: mean
+      linewidth: 1
+      jitter_means: true
+    statistics_only_supported: false
+    retain: null
+    export_format: svg
+    transparent: false
+  fig3G_stats:
+    function: plot_peak_dff_by_visual_stim_panel_width_shade_box_CI_stats
+    datasets:
+      data_df_dir: two_photon_dna10_width
+    arguments:
+      pattern_dict:
+        4.0: Pitch
+        12.0: Per. rev
+      line: '1070'
+      flying_threshold_default: 0.14
+      seconds_pre: 0.5
+      seconds_post: 1
+      airpuff_threshold: 2.0
+      plot_fly_means: true
+      plot_bs_CI: true
+      stim_seconds: 3
+      air_puff_pre_s: 1
+      response_curve_to_compare: -3
+      stat_method: mean
+      linewidth: 1
+      jitter_means: true
+    statistics_only_supported: true
+    retain: null
+    export_format: svg
+    transparent: false
+  fig3G_regression:
+    function: plot_peak_dff_by_visual_stim_panel_width_regression
+    datasets:
+      data_df_dir: two_photon_dna10_width
+    arguments:
+      pattern_dict:
+        1.0: '36 deg
+
+          azimuth'
+        3.0: '72 deg
+
+          azimuth'
+        5.0: '108 deg
+
+          azimuth'
+        7.0: '144 deg
+
+          azimuth'
+        9.0: '180 deg
+
+          azimuth'
+        11.0: '216 deg
+
+          azimuth'
+      volt_int_dict:
+        1.0: 36
+        3.0: 72
+        5.0: 108
+        7.0: 144
+        9.0: 180
+        11.0: 216
+      regression_type: linregress
+      line: '1070'
+      flying_threshold_default: 0.14
+      seconds_pre: 0.5
+      seconds_post: 1
+      airpuff_threshold: 2.0
+      plot_fly_regressions: false
+      stim_seconds: 3
+      air_puff_pre_s: 1
+      response_curve_to_compare: -3
+      stat_method: mean
+      linewidth: 1
+      jitter_means: true
+      width_deg_or_percent: deg
+    statistics_only_supported: true
+    retain: null
+    export_format: png
+    transparent: false
+  fig3H:
+    axes: {ylim: [-0.1, 0.6], left_spine_bounds: [0.0, 0.5], size_scale: [2.0, 1.0]}
+    canvas_padding_in: {bottom: 0.2}
+    function: plot_avg_trace_per_flight_starts_per_trial_combined_flies_single_roi
+    datasets:
+      data_df_dir: two_photon_dna10_updown
+    arguments:
+      line: '1070'
+      flying_threshold_default: 0.14
+      seconds_pre: 0.5
+      seconds_post: 1
+      airpuff_threshold: 2.0
+      bout_time: 2
+      plot_bs_CI: true
+      line_width: 0.25
+      axis_ticklabel_fontsize: 6
+      axis_label_fontsize: 6
+    statistics_only_supported: false
+    retain: null
+    export_format: svg
+    transparent: false

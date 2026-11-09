@@ -1,0 +1,12 @@
+name: MANC-connectome-env
+dependencies:
+  - python=3.11
+  - numpy
+  - matplotlib
+  - pandas
+  - pyyaml
+  - pip
+  - pip:
+      - navis
+      - neuprint-python
+      - flybrains

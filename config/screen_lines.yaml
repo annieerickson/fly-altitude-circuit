@@ -1,0 +1,39 @@
+# Sorted by phi key point, min -> max.
+order:
+  ["1070", "S37", "S207", "S194", "S38", "S71", "S441", "S211", "S98",
+   "S204", "S227", "S113", "S73", "S103", "S217", "S228", "S76", "S390", "S178",
+   "S56", "S24", "S257", "S249", "S18", "S00"]
+
+# Display order for the main figure (Fig 1D); 
+main_subset:
+  ["1070", "S37", "S441", "S211", "S227", "S390", "S178", "S56", "S24", "S257",
+   "S249", "S18", "S00"]
+
+
+#S: lab code, driver: neurons target id: SS id number
+lines:
+  "S24":   {driver: "DNg03",         id: "2548"}
+  "S257":  {driver: "DNg03",         id: "2633"}
+  "S98":   {driver: "DNa07",         id: "1541"}
+  "S73":   {driver: "DNg09",         id: "1058"}
+  "S228":  {driver: "DNp17",         id: "2553"}
+  "S113":  {driver: "DNp15",         id: "1556"}
+  "S71":   {driver: "DNp28",         id: "1056"}
+  "S38":   {driver: "DNp18",         id: "2392"}
+  "S37":   {driver: "DNa10, DNa04",  id: "2384"}
+  "S103":  {driver: "DNa07, DNa05",  id: "1546"}
+  "S204":  {driver: "DNa08",         id: "2393"}
+  "S211":  {driver: "DNa05",         id: "2536"}
+  "S76":   {driver: "DNg26",         id: "1061"}
+  "S178":  {driver: "DNg17",         id: "2279"}
+  "S56":   {driver: "DNg17",         id: "0898"}
+  "S227":  {driver: "DNb03",         id: "2552"}
+  "S207":  {driver: "DNb02",         id: "2396"}
+  "S194":  {driver: "DNb01",         id: "2383"}
+  "S390":  {driver: "DNa15",         id: "DNa15"}
+  "S18":   {driver: "DNg02, 19 pair", driver_abbrev: "DNg02", id: "1562"}
+  "S249":  {driver: "DNg02, 12 pair", driver_abbrev: "DNg02", id: "2625"}
+  "S00":   {driver: "empty-split",   driver_abbrev: "control", id: "control"}
+  "1070":  {driver: "DNa10",         id: "1070"}
+  "S217":  {driver: "DNb01",         id: "2542"}
+  "S441":  {driver: "DNa04",         id: "55587"}

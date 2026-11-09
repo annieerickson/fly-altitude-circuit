@@ -1,0 +1,19 @@
+name: FAFB-connectome-env
+dependencies:
+  - python=3.11
+  - numpy
+  - matplotlib
+  - pandas
+  - seaborn
+  - pyyaml
+  - requests
+  - tqdm
+  - conda-forge::gevent
+  - conda-forge::cryptography>=38.0.3
+  - pip
+  - pip:
+      - fafbseg==3.2.2
+      - flybrains
+      - navis
+      - caveclient
+      - ipykernel

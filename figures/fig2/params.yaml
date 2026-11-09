@@ -1,0 +1,29 @@
+panels:
+  b:
+    components: [2]
+    size_in: [1.16798, 1.16798]
+    title: ''
+    ylabel: 'Force $(m\,g)^{-1}$'
+    xlabel: wingstroke cycle
+    xlabel_pad: 3
+    bottom_padding_in: 0.3
+    subplots_adjust: {left: 0.273, bottom: 0.055, right: 0.821, top: 0.937, wspace: 0.2, hspace: 0.073}
+    ylim: [-1.25, 4.5]
+    yticks: [-1, 0, 1, 2, 3, 4]
+    spine_bounds: [-1, 4]
+  c:
+    mean_force_scale: 50
+    plot_mean_forces: true
+    plot_lollipops: true
+    right_wing_on: false
+    dpi: 300
+    body_scale: [0.80, 0.85, 0.90]
+    body_color: [0.7, 0.7, 0.7]
+    window_size: [2400, 1800]
+    capture_scale: 3
+    camera_parallel_scale: 2.5
+    camera_position: [0, 12, 0]
+    camera_clip: [0, 16]
+    camera_up: [0, 0, 1]
+    camera_focal: [0.0, 0.0, 0.0]
+    chord_sample_stride: 35
